@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    double arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
+    double maxAbsolute = 0.0;
+    for (int i = 0; i < n; ++i) {
+        double absoluteValue = abs(arr[i]);
+        if (absoluteValue > maxAbsolute) {
+            maxAbsolute = absoluteValue;
+        }
+    }
+
+    cout << fixed << setprecision(2) << maxAbsolute << endl;
+
+    return 0;
+}
